@@ -93,7 +93,7 @@ screen -dmS playit playit
 if [ -f server.sh ]; then
   echo "✅ server.jar already exists. Skipping download."
 else
-wget -O server.sh https://bit.ly/434WMCi
+wget -O server.sh https://bit.ly/44DeKgi
 chmod +x server.sh
 fi
 
