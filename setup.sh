@@ -12,6 +12,8 @@ if [[ "$choice" == "y" || "$choice" == "yes" ]]; then
     echo "Downloading Minecraft Bedrock server..."
     wget -O geyser.jar https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
     wget -O floodgate.jar https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
+    wget -O viaverson.jar https://www.spigotmc.org/resources/viaversion.19254/download?version=585264
+    wget -O viabackward.jar https://www.spigotmc.org/resources/viabackwards.27448/download?version=552391
     echo "Download complete."
 fi
 cd ..
