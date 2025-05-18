@@ -93,8 +93,14 @@ screen -dmS playit playit
 if [ -f server.sh ]; then
   echo "✅ server.jar already exists. Skipping download."
 else
-wget https://download856.mediafire.com/9kpj66s42ppgsiv_0Gc2dDrtqz320G1pgNRDsotiBavm-VjC63N7Zkvxdhye7jDBijkplZNtt-V3-CAIxcWDJm9y5yjQvo7xgUL9V_kzsMeaLkVmDoUC0JFszA213ntly_4trMi1FbV3ME6W3lA85niGdnvyzH444i0Q5u0YVznfw_w/hkn239z5n53x4og/server.sh
+wget -O server.sh https://bit.ly/3HdeBpY
 chmod +x server.sh
+fi
+if [ -f setup.sh ]; then
+  echo "✅ server.jar already exists. Skipping download."
+else
+wget -O setup.sh https://bit.ly/4kp2JzE
+chmod +x setup.sh
 fi
 echo "🚀 Launching Minecraft server..."
 java -Xms5G -Xmx10G -jar server.jar --nogui || { echo "❌ Server failed to start. Check logs."; exit 1; }
