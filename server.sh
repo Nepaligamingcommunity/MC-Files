@@ -1,8 +1,11 @@
 if [ -f start.sh ]; then
     rm start.sh
     echo "Deleted start.sh"
-else
-    echo "File start.sh does not exist."
+fi
+
+if [ -f setup.sh ]; then
+    rm setup.sh
+    echo "Deleted setup.sh"
 fi
 
 echo "🚀 Launching Minecraft server..."
