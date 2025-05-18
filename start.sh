@@ -91,17 +91,17 @@ fi
 
 screen -dmS playit playit
 if [ -f server.sh ]; then
-  echo "✅ server.jar already exists. Skipping download."
+  echo "✅ server.sh already exists. Skipping download."
 else
-wget -O server.sh https://bit.ly/44DeKgi
+wget -O server.sh https://raw.githubusercontent.com/Nepaligamingcommunity/OFFICIAL-FILES/main/server.sh
 chmod +x server.sh
 fi
 
 
 if [ -f setup.sh ]; then
-  echo "✅ setup.jar already exists. Skipping download."
+  echo "✅ setup.sh already exists. Skipping download."
 else
-wget -O setup.sh https://bit.ly/44JSUYv
+wget -O setup.sh https://raw.githubusercontent.com/Nepaligamingcommunity/OFFICIAL-FILES/main/setup.sh
 chmod +x setup.sh
 fi
 
@@ -109,7 +109,7 @@ fi
 if [ -f final-setup.sh ]; then
   echo "✅ final-setup.sh already exists. Skipping download."
 else
-wget -O final-setup.sh https://bit.ly/4mmDxeQ
+wget -O final-setup.sh https://raw.githubusercontent.com/Nepaligamingcommunity/OFFICIAL-FILES/main/final-setup.sh
 chmod +x final-setup.sh
 fi
 
