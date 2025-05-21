@@ -61,7 +61,7 @@ else
         wget -O server.jar https://api.papermc.io/v2/projects/paper/versions/1.21.5/builds/78/downloads/paper-1.21.5-78.jar
         break ;;
       *)
-        echo "❌ Invalid choice. Please choose a number between 1-6." ;;
+        echo "❌ Invalid choice. Please choose a number between 1-5." ;;
     esac
   done
 fi
