@@ -56,15 +56,6 @@ else
   echo "eula=true" > eula.txt
 fi
 
-screen -dmS playit playit
-if [ -f server.sh ]; then
-  echo "✅ server.sh already exists. Skipping download."
-else
-wget -O server.sh https://raw.githubusercontent.com/Nepaligamingcommunity/OFFICIAL-FILES/main/server.sh
-chmod +x server.sh
-fi
-
-
 if [ -f setup.sh ]; then
   echo "✅ setup.sh already exists. Skipping download."
 else
