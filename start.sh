@@ -24,48 +24,15 @@ else
     wget https://download.oracle.com/java/21/archive/jdk-21.0.6_linux-x64_bin.deb || { echo "❌ Failed to download Java. Exiting."; exit 1; }
   fi
   sudo dpkg -i jdk-21.0.6_linux-x64_bin.deb || { echo "❌ Failed to install Java. Exiting."; exit 1; }
+  sudo apt remove --purge openjdk-17-jdk openjdk-17-jre -y
+sudo apt autoremove -y
 fi
 
 # === Download PaperMC ===
 if [ -f server.jar ]; then
   echo "✅ server.jar already exists. Skipping download."
 else
-  echo "📥 Choose a PaperMC version to download:"
-  echo "1) PaperMC 1.21"
-  echo "2) PaperMC 1.21.1"
-  echo "3) PaperMC 1.21.3"
-  echo "4) PaperMC 1.21.4"
-  echo "5) PaperMC 1.21.5"
-
-  while true; do
-    read -p "Enter your choice (1-5): " choice
-    case "$choice" in
-      1)
-        echo "Downloading PaperMC 1.21"
-        wget -O server.jar https://api.papermc.io/v2/projects/paper/versions/1.21/builds/130/downloads/paper-1.21-130.jar
-        break ;;
-      2)
-        echo "Downloading PaperMC 1.21.1"
-        wget -O server.jar https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/133/downloads/paper-1.21.1-133.jar
-        break ;;
-      3)
-        echo "Downloading PaperMC 1.21.3"
-        wget -O server.jar https://api.papermc.io/v2/projects/paper/versions/1.21.3/builds/83/downloads/paper-1.21.3-83.jar
-        break ;;
-      4)
-        echo "Downloading PaperMC 1.21.4"
-        wget -O server.jar https://api.papermc.io/v2/projects/paper/versions/1.21.4/builds/230/downloads/paper-1.21.4-230.jar
-        break ;;
-      5)
-        echo "Downloading PaperMC 1.21.5"
-        wget -O server.jar https://api.papermc.io/v2/projects/paper/versions/1.21.5/builds/78/downloads/paper-1.21.5-78.jar
-        break ;;
-      *)
-        echo "❌ Invalid choice. Please choose a number between 1-5." ;;
-    esac
-  done
-fi
-
+ wget -O server.jar 
 # === Add Playit repo and key ===
 if is_installed playit; then
   echo "✅ playit already installed. Skipping."
