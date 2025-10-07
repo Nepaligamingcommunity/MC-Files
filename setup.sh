@@ -14,6 +14,7 @@ if [[ "$choice" == "y" || "$choice" == "yes" ]]; then
     wget -O floodgate.jar https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
     wget -O viaverson.jar https://cdn.modrinth.com/data/P1OZGk5p/versions/GCr8TC4U/ViaVersion-5.5.0.jar
     wget -O viabackwards.jar https://cdn.modrinth.com/data/NpvuJQoq/versions/LSf7EvPT/ViaBackwards-5.5.0.jar
+    wget -O playit.jar https://github.com/playit-cloud/playit-minecraft-plugin/releases/latest/download/playit-minecraft-plugin.jar
 
     echo "Download complete."
 fi
